@@ -1,1 +1,10 @@
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
 
+.Container footer {
+  font-size: 11px;
+  margin: 5 auto;
+}

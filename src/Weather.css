@@ -1,4 +1,19 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .Weather {
   border: 1px solid;
   border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  padding: 15px;
+  margin: 30px auto;
+}
+
+.Weather ul {
+  margin: 0px;
+  padding: 0px;
+}
+.Weather li {
+  list-style: none;
 }
