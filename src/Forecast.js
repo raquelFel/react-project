@@ -8,7 +8,18 @@ export default function Forecast(props) {
   function handleResponse(response) {
     setForecastData(response.data);
     setLoaded(true);
-    console.log(response.data.list[1].weather[0].icon);
+  }
+
+  function formatHours(date) {
+    let hours = date.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    return `${hours}:${minutes}`;
   }
 
   if (loaded && forecastData.city.name === props.city) {
@@ -18,6 +29,7 @@ export default function Forecast(props) {
           let iconUrl = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
           return (
             <div className="col-2">
+              {formatHours(new Date(weather.dt * 1000))}
               <img src={iconUrl} alt="oops!" />
               {Math.round(weather.main.temp)}ºC
             </div>
