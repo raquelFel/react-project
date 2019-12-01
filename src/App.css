@@ -6,5 +6,13 @@
 
 .Container footer {
   font-size: 11px;
-  margin: 5 auto;
+  margin: auto;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.footer {
+  font-size: 12px;
 }

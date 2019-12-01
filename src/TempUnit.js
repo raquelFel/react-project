@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./TempUnit.css";
 
 export default function TempUnit(props) {
   const [unit, setUnit] = useState("celsius");
@@ -16,12 +17,15 @@ export default function TempUnit(props) {
   if (unit === "celsius") {
     return (
       <div className="TempUnit">
-        <span class="unit">
-          {props.celsius}ºC |{" "}
-          <a href="/" onClick={showFahrenheit}>
-            {" "}
-            ºF
-          </a>
+        <span className="unit">
+          {props.celsius}
+          <span className="CF">
+            ºC |{" "}
+            <a href="/" onClick={showFahrenheit}>
+              {" "}
+              ºF
+            </a>
+          </span>
         </span>
       </div>
     );
@@ -31,10 +35,12 @@ export default function TempUnit(props) {
       <div className="TempUnit">
         <span class="unit">
           {fahrenheit}
-          <a href="/" onClick={showCelsius}>
-            ºC
-          </a>{" "}
-          | ºF
+          <span className="CF">
+            <a href="/" onClick={showCelsius}>
+              ºC
+            </a>{" "}
+            | ºF
+          </span>
         </span>
       </div>
     );

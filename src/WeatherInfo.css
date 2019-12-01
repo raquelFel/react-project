@@ -1,0 +1,36 @@
+.WeatherInfo {
+  margin-bottom: 45px;
+}
+
+.WeatherInfo h1 {
+  color: #465881;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.WeatherInfo li {
+  color: #00909e;
+  font-size: 12px;
+}
+
+.Date {
+  font-size: 18px;
+  color: #465881;
+}
+
+.descrip {
+  font-size: 14px;
+  color: #465881;
+}
+
+.col-3 {
+  margin: auto;
+  float: left;
+  padding: 0;
+  color: #465881;
+  font-weight: 100;
+}
+
+.col-6 {
+  margin-top: 25px;
+}

@@ -9,13 +9,15 @@ function App() {
     <div className="App">
       <Weather defaultCity="Paris" />
       <footer>
-        {" "}
-        This project was coded by{" "}
-        <a href="https://raquelfelgueiras.com/">Raquel Felgueiras </a>and is{" "}
-        {""}
-        <a href="https://github.com/raquelFel/react-project" target="_blank">
-          Open-source on GitHub
-        </a>
+        <smal className="footer">
+          {" "}
+          This project was coded by{" "}
+          <a href="https://raquelfelgueiras.com/">Raquel Felgueiras </a>and is{" "}
+          {""}
+          <a href="https://github.com/raquelFel/react-project" target="_blank">
+            Open-source on GitHub
+          </a>
+        </smal>
       </footer>
     </div>
   );

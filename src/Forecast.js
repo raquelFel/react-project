@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Forecast.css";
 
 export default function Forecast(props) {
   const [forecastData, setForecastData] = useState(null);
