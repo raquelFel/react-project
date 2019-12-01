@@ -8,13 +8,20 @@ export default function Forecast(props) {
   function handleResponse(response) {
     setForecastData(response.data);
     setLoaded(true);
+    console.log(response.data.list[1].weather[0].icon);
   }
 
   if (loaded && forecastData.city.name === props.city) {
     return (
       <div className="Forecast row">
-        {forecastData.list.slice(0, 5).map(function(weather) {
-          return <div className="col">{Math.round(weather.main.temp)}ºC</div>;
+        {forecastData.list.slice(0, 6).map(function(weather) {
+          let iconUrl = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+          return (
+            <div className="col-2">
+              <img src={iconUrl} alt="oops!" />
+              {Math.round(weather.main.temp)}ºC
+            </div>
+          );
         })}
       </div>
     );
